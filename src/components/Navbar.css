@@ -1,0 +1,170 @@
+.ibm-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.ibm-navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: relative;
+}
+
+.ibm-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f70c1;
+    letter-spacing: 1px;
+}
+
+.ibm-menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.ibm-nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.ibm-nav-item-wrapper {
+    position: relative;
+}
+
+.ibm-nav-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.ibm-nav-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #161616;
+    padding: 8px 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.ibm-nav-button:hover {
+    color: #1f70c1;
+    border-bottom: 2px solid #1f70c1;
+}
+
+.ibm-nav-item.active .ibm-nav-button {
+    color: #1f70c1;
+    border-bottom: 2px solid #1f70c1;
+    background-color: #e5f1fb;
+}
+
+.ibm-dropdown-horizontal {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    border-radius: 4px;
+    z-index: 999;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    gap: 24px;
+    min-width: 600px;
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+.ibm-dropdown-box {
+    padding: 10px;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.ibm-dropdown-box:hover {
+    border-left: 2px solid #1f70c1;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.ibm-dropdown-heading {
+    font-weight: 600;
+    color: #1f70c1;
+    margin-bottom: 6px;
+}
+
+.ibm-dropdown-desc {
+    font-size: 12px;
+    color: #525252;
+}
+
+.ibm-icons {
+    display: flex;
+    gap: 16px;
+    color: #525252;
+}
+
+.ibm-icons svg:hover {
+    color: #1f70c1;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .ibm-menu-toggle {
+        display: block;
+    }
+
+    .ibm-nav-links {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 24px;
+        display: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .ibm-nav-links.open {
+        display: flex;
+    }
+
+    .ibm-icons {
+        display: none;
+    }
+
+    .ibm-dropdown-horizontal {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        box-shadow: none;
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
