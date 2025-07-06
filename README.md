@@ -1,12 +1,26 @@
-# React + Vite
+# IBM Style Responsive Navbar using React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project implements a fully responsive and interactive **IBM-style navigation bar** built with **React** and **CSS** (Tailwind or plain CSS supported). It mimics the look and functionality of IBM’s official website navigation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ✅ Fully responsive navbar
+- ✅ Dropdown menus for each top-level item (like AI, Hybrid Cloud, etc.)
+- ✅ Smooth hover effects
+- ✅ Mobile-friendly menu toggle (hamburger)
+- ✅ Icons for Search, Language, and Profile
+- ✅ Clean layout following IBM’s design aesthetics
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Live Demo
+
+> You can deploy the app using [Netlify](https://www.netlify.com/)  
+> Drag-and-drop the `build/` folder or connect with GitHub for CI/CD.
+live at ibm-navbarapp.netlify.app
+---
+
+
+
